@@ -103,9 +103,9 @@ const SalesOverTime = () => {
           </Typography>
           <Typography variant='body2'>Your sales performance is 45% 😎 better compared to last month</Typography>
         </Box>
-        <Button fullWidth variant='contained'>
+        {/* <Button fullWidth variant='contained'>
           Details
-        </Button>
+        </Button> */}
       </CardContent>
     </Card>
   )

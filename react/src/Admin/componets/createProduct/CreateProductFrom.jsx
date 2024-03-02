@@ -232,6 +232,7 @@ const jwt=localStorage.getItem("jwt")
                 <MenuItem value="t-shirts">T-Shirts</MenuItem>
                 <MenuItem value="saree">Saree</MenuItem>
                 <MenuItem value="lengha_choli">Lengha Choli</MenuItem>
+                <MenuItem value="watches">watches</MenuItem>
               </Select>
             </FormControl>
           </Grid>

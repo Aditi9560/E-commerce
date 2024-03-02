@@ -41,9 +41,9 @@ const Achivement = () => {
         <Typography variant='h5' sx={{ my: 3.1, color: 'primary.main' }}>
           420.8k
         </Typography>
-        <Button size='small' variant='contained'>
+        {/* <Button size='small' variant='contained'>
           View Sales
-        </Button>
+        </Button> */}
         <TriangleImg alt='triangle background' src={`/images/misc/${imageSrc}`} />
         <TrophyImg alt='trophy' src='/images/misc/trophy.png' />
       </CardContent>
