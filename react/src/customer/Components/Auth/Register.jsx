@@ -23,6 +23,7 @@ useEffect(()=>{
 
 
   useEffect(() => {
+    console.log("*********Auth",auth )
     if (auth.user || auth.error) setOpenSnackBar(true)
   }, [auth.user]);
   
@@ -39,7 +40,7 @@ useEffect(()=>{
     }
     console.log("user data",userData);
     dispatch(register(userData))
-  
+   setOpenSnackBar(true)
   };
 
   return (
@@ -113,7 +114,7 @@ useEffect(()=>{
 
 <Snackbar open={openSnackBar} autoHideDuration={6000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
-          {auth.error?auth.error:auth.user?"Register Success":""}
+          {auth.error?auth.error:auth.user?"Register Success":auth.error}
         </Alert>
       </Snackbar>
      

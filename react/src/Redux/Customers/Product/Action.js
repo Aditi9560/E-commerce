@@ -107,11 +107,15 @@ export const createProduct = (product) => async (dispatch) => {
 export const updateProduct = (product) => async (dispatch) => {
   try {
     dispatch({ type: UPDATE_PRODUCT_REQUEST });
+    console.log("payload is", product)
 
+   console.log("*********************************12333333333333333333333", product.productId)
     const { data } = await api.put(
       `${API_BASE_URL}/api/admin/products/${product.productId}`,
       product
     );
+    console.log("data is", data)
+  
 
     dispatch({
       type: UPDATE_PRODUCT_SUCCESS,

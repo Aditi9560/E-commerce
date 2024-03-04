@@ -69,8 +69,8 @@ const UpdateProductForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(updateProduct());
-    console.log(productData);
+    dispatch(updateProduct(productData));
+    console.log("*****productData",productData);
   };
 
   useEffect(() => {
