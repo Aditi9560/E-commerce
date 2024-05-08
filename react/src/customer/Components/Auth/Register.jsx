@@ -23,9 +23,8 @@ useEffect(()=>{
 
 
   useEffect(() => {
-    console.log("*********Auth",auth )
     if (auth.user || auth.error) setOpenSnackBar(true)
-  }, [auth.user]);
+  }, [auth]);
   
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -38,7 +37,6 @@ useEffect(()=>{
       password: data.get("password"),
       
     }
-    console.log("user data",userData);
     dispatch(register(userData))
    setOpenSnackBar(true)
   };

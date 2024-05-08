@@ -22,21 +22,21 @@ export default function LoginUserForm({ handleNext }) {
   
   
     useEffect(() => {
-      if (auth.user || auth.error) setOpenSnackBar(true)
-    }, [auth.user]);
+      if (auth.user || auth.error) {
+        setOpenSnackBar(true);
+      }
+    }, [auth]);
+
   const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
+     event.preventDefault();
+     const data = new FormData(event.currentTarget);
     
     const userData={
       email: data.get("email"),
       password: data.get("password"),
      
     }
-    console.log("login user",userData);
-  
     dispatch(login(userData));
-
   };
 
   return (
